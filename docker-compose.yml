@@ -1,0 +1,20 @@
+services:
+
+  ubicoders_jazzy_kimeravio:
+    container_name: ubicoders_jazzy_kimeravio_cnt
+    build:
+      context: .
+      dockerfile: ./ros2jazzy/Dockerfile
+    image: ubicoders/ros2:jazzy
+    network_mode: host
+    privileged: true
+    stdin_open: true # docker run -i
+    tty: true        # docker run -t
+    environment:
+    - DISPLAY
+    - QT_X11_NO_MITSHM=1 
+    volumes:
+      - "/tmp/.X11-unix/:/tmp/.X11-unix/:rw"
+      - "$HOME/.Xauthority:/root/.Xauthority:rw"
+      - "./robot_ws/:/home/ubuntu/robot_ws/"           # Robot workspace
+      - /mnt/01D66F5B1654EDA0/euroc:/home/ubuntu/euroc # EuroC dataset
