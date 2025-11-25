@@ -1,5 +1,5 @@
 robot_ws/build/
-robot_ws/logs/
+robot_ws/log/
 robot_ws/install/
 *.cached
 
