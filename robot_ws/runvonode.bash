@@ -1,0 +1,2 @@
+#ros2 run my_stereo_vo stereo_visual_slam_node
+ros2 run stereo_visual_slam stereo_visual_slam_node 

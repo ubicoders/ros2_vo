@@ -1,0 +1,2 @@
+BreakConstructorInitializers: BeforeColon
+ConstructorInitializerIndentWidth: 4
