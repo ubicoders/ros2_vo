@@ -32,7 +32,7 @@ public:
         this->declare_parameter<std::string>("frame_id", "kitti_camera");
     publish_rate_ = this->declare_parameter<double>("publish_rate", 10.0);
     start_index_param_ = this->declare_parameter<int>("start_index", 0);
-    repeat_sequence_ = this->declare_parameter<bool>("repeat", false);
+    repeat_sequence_ = this->declare_parameter<bool>("repeat", true);
 
     left_pub_ = this->create_publisher<sensor_msgs::msg::Image>(
         "/stereo/image_left", 10);

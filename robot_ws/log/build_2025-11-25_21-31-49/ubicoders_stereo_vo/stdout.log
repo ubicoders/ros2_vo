@@ -1,0 +1,5 @@
+[ 50%] Built target sv_lib
+[100%] Built target ubicoders_svo_node
+-- Install configuration: ""
+-- Execute custom install script
+-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/lib/ubicoders_stereo_vo/ubicoders_svo_node

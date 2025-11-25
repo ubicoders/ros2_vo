@@ -1,0 +1,17 @@
+[0.033s] Invoking command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ubuntu/robot_ws/build/ubicoders_stereo_vo -- -j28 -l28
+[0.318s] [ 50%] Built target sv_lib
+[0.547s] [100%] Built target ubicoders_svo_node
+[0.569s] Invoked command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ubuntu/robot_ws/build/ubicoders_stereo_vo -- -j28 -l28
+[0.589s] Invoking command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/ubuntu/robot_ws/build/ubicoders_stereo_vo
+[0.613s] -- Install configuration: ""
+[0.613s] -- Execute custom install script
+[0.615s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/lib/ubicoders_stereo_vo/ubicoders_svo_node
+[0.616s] [31mCMake Error at ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:100 (message):
+[0.616s]   ament_cmake_symlink_install_directory() can't find
+[0.617s]   '/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/launch'
+[0.617s] Call Stack (most recent call first):
+[0.618s]   ament_cmake_symlink_install/ament_cmake_symlink_install.cmake:317 (ament_cmake_symlink_install_directory)
+[0.619s]   cmake_install.cmake:46 (include)
+[0.619s] 
+[0.620s] [0m
+[0.621s] Invoked command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/ubuntu/robot_ws/build/ubicoders_stereo_vo

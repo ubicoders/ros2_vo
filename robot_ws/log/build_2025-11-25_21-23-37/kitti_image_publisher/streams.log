@@ -1,0 +1,23 @@
+[0.050s] Invoking command in '/home/ubuntu/robot_ws/build/kitti_image_publisher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ubuntu/robot_ws/build/kitti_image_publisher -- -j28 -l28
+[0.230s] [100%] Built target kitti_image_publisher_node
+[0.259s] Invoked command in '/home/ubuntu/robot_ws/build/kitti_image_publisher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ubuntu/robot_ws/build/kitti_image_publisher -- -j28 -l28
+[0.275s] Invoking command in '/home/ubuntu/robot_ws/build/kitti_image_publisher': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/ubuntu/robot_ws/build/kitti_image_publisher
+[0.296s] -- Install configuration: ""
+[0.297s] -- Execute custom install script
+[0.298s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/lib/kitti_image_publisher/kitti_image_publisher_node
+[0.299s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/ament_index/resource_index/package_run_dependencies/kitti_image_publisher
+[0.299s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/ament_index/resource_index/parent_prefix_path/kitti_image_publisher
+[0.300s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/environment/ament_prefix_path.sh
+[0.300s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/environment/ament_prefix_path.dsv
+[0.301s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/environment/path.sh
+[0.302s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/environment/path.dsv
+[0.302s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/local_setup.bash
+[0.303s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/local_setup.sh
+[0.303s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/local_setup.zsh
+[0.304s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/local_setup.dsv
+[0.304s] -- Symlinking: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/package.dsv
+[0.330s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/ament_index/resource_index/packages/kitti_image_publisher
+[0.331s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/cmake/kitti_image_publisherConfig.cmake
+[0.332s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/cmake/kitti_image_publisherConfig-version.cmake
+[0.332s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/kitti_image_publisher/share/kitti_image_publisher/package.xml
+[0.336s] Invoked command in '/home/ubuntu/robot_ws/build/kitti_image_publisher' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/ubuntu/robot_ws/build/kitti_image_publisher
