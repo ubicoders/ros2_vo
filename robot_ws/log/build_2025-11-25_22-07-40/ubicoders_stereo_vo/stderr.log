@@ -1,0 +1,7 @@
+In file included from [01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_node.cpp:1[m[K:
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:1:[m[K [01;31m[Kerror: [m[Kunterminated #ifndef
+    1 | #ifndef __UBICODERS_SVO_NODE_H__
+      | 
+gmake[2]: *** [CMakeFiles/sv_lib.dir/build.make:76: CMakeFiles/sv_lib.dir/src/ubicoders_svo_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/sv_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

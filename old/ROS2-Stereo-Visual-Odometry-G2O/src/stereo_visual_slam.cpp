@@ -1,7 +1,8 @@
 #include "stereo_visual_slam/stereo_visual_slam.hpp"
 
 namespace StereoSLAM {
-StereoVisualSLAM::StereoVisualSLAM(const rclcpp::NodeOptions &options) : Node("stereo_visual_slam", options) {
+StereoVisualSLAM::StereoVisualSLAM(const rclcpp::NodeOptions &options) 
+: Node("stereo_visual_slam", options) {
   double focal = 718.8560;
   double baseline = 0.537;
   cv::Point2d pp(607.1928, 185.2157);

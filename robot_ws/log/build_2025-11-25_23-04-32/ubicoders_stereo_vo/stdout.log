@@ -1,0 +1,5 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/sv_lib.dir/src/ubicoders_svo_node.cpp.o[0m
+[ 50%] [32m[1mLinking CXX static library libsv_lib.a[0m
+[ 50%] Built target sv_lib
+[ 75%] [32mBuilding CXX object CMakeFiles/ubicoders_svo_node.dir/src/ubicoders_svo_node.cpp.o[0m
+[100%] [32m[1mLinking CXX executable ubicoders_svo_node[0m

@@ -1,0 +1,2 @@
+Invoking command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ubuntu/robot_ws/build/ubicoders_stereo_vo -- -j28 -l28
+Invoked command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ubuntu/robot_ws/build/ubicoders_stereo_vo -- -j28 -l28

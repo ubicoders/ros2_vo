@@ -1,0 +1,52 @@
+In file included from [01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_node.cpp:1[m[K:
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:1:[m[K [01;31m[Kerror: [m[Kunterminated #ifndef
+    1 | #ifndef __UBICODERS_SVO_NODE_H__
+      | 
+In file included from [01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_publishers.hpp:13[m[K,
+                 from [01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:4[m[K:
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/config.hpp:17:3:[m[K [01;31m[Kerror: [m[K‘[01m[KK[m[K’ does not name a type
+   17 |   [01;31m[KK[m[K << fx, 0, cx, 0, fy, cy, 0, 0, 1;
+      |   [01;31m[K^[m[K
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/config.hpp:20:3:[m[K [01;31m[Kerror: [m[K‘[01m[Kt[m[K’ does not name a type; did you mean ‘[01m[Ktm[m[K’?
+   20 |   [01;31m[Kt[m[K << 0, 0, 0;
+      |   [01;31m[K^[m[K
+      |   [32m[Ktm[m[K
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:33:47:[m[K [01;31m[Kerror: [m[K‘[01m[KImage[m[K’ was not declared in this scope; did you mean ‘[01m[Ksensor_msgs::msg::Image[m[K’?
+   33 |   std::shared_ptr<message_filters::Subscriber<[01;31m[KImage[m[K>> sub_img_left;
+      |                                               [01;31m[K^~~~~[m[K
+      |                                               [32m[Ksensor_msgs::msg::Image[m[K
+In file included from [01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/image.hpp:7[m[K,
+                 from [01m[K/opt/ros/jazzy/include/cv_bridge/cv_bridge/cv_bridge.hpp:40[m[K,
+                 from [01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_publishers.hpp:4[m[K:
+[01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:211:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Image[m[K’ declared here
+  211 | using [01;36m[KImage[m[K =
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:33:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   33 |   std::shared_ptr<message_filters::Subscriber<[01;31m[KImage[m[K>> sub_img_left;
+      |                                               [01;31m[K^~~~~[m[K
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:33:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   33 |   std::shared_ptr<message_filters::Subscriber<Image[01;31m[K>>[m[K sub_img_left;
+      |                                                    [01;31m[K^~[m[K
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:34:47:[m[K [01;31m[Kerror: [m[K‘[01m[KImage[m[K’ was not declared in this scope; did you mean ‘[01m[Ksensor_msgs::msg::Image[m[K’?
+   34 |   std::shared_ptr<message_filters::Subscriber<[01;31m[KImage[m[K>> sub_img_right;
+      |                                               [01;31m[K^~~~~[m[K
+      |                                               [32m[Ksensor_msgs::msg::Image[m[K
+[01m[K/opt/ros/jazzy/include/sensor_msgs/sensor_msgs/msg/detail/image__struct.hpp:211:7:[m[K [01;36m[Knote: [m[K‘[01m[Ksensor_msgs::msg::Image[m[K’ declared here
+  211 | using [01;36m[KImage[m[K =
+      |       [01;36m[K^~~~~[m[K
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:34:47:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   34 |   std::shared_ptr<message_filters::Subscriber<[01;31m[KImage[m[K>> sub_img_right;
+      |                                               [01;31m[K^~~~~[m[K
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:34:52:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   34 |   std::shared_ptr<message_filters::Subscriber<Image[01;31m[K>>[m[K sub_img_right;
+      |                                                    [01;31m[K^~[m[K
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:35:49:[m[K [01;31m[Kerror: [m[K‘[01m[KImageSyncPolicy[m[K’ was not declared in this scope
+   35 |   std::shared_ptr<message_filters::Synchronizer<[01;31m[KImageSyncPolicy[m[K>>
+      |                                                 [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:35:49:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:35:64:[m[K [01;31m[Kerror: [m[Ktemplate argument 1 is invalid
+   35 |   std::shared_ptr<message_filters::Synchronizer<ImageSyncPolicy[01;31m[K>>[m[K
+      |                                                                [01;31m[K^~[m[K
+gmake[2]: *** [CMakeFiles/sv_lib.dir/build.make:76: CMakeFiles/sv_lib.dir/src/ubicoders_svo_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/sv_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

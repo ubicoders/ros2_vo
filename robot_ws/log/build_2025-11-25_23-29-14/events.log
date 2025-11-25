@@ -1,0 +1,227 @@
+[0.000000] (-) TimerEvent: {}
+[0.000601] (-) JobUnselected: {'identifier': 'kitti_image_publisher'}
+[0.000831] (ubicoders_stereo_vo) JobQueued: {'identifier': 'ubicoders_stereo_vo', 'dependencies': OrderedDict()}
+[0.000986] (ubicoders_stereo_vo) JobStarted: {'identifier': 'ubicoders_stereo_vo'}
+[0.027590] (ubicoders_stereo_vo) JobProgress: {'identifier': 'ubicoders_stereo_vo', 'progress': 'cmake'}
+[0.029582] (ubicoders_stereo_vo) JobProgress: {'identifier': 'ubicoders_stereo_vo', 'progress': 'build'}
+[0.031006] (ubicoders_stereo_vo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo', '--', '-j28', '-l28'], 'cwd': '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(base)', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'elcom', 'GIT_ASKPASS': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/bin/helpers/browser.sh', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/root', 'CONDA_SHLVL': '1', 'TERM_PROGRAM_VERSION': '1.104.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-c0531dbb-58d5-4f0b-bf4e-3f85c33b26e3.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', '_CE_M': '', 'REMOTE_CONTAINERS': 'true', '_CONDA_ROOT': '/miniconda', 'COLCON_PREFIX_PATH': '/home/ubuntu/robot_ws/install', 'ROS_DISTRO': 'jazzy', '_': '/miniconda/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', '_CE_CONDA': '', 'QT_X11_NO_MITSHM': '1', 'PATH': '/miniconda/bin:/miniconda/condabin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/bin/remote-cli:/miniconda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-bef8ffe844.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/root/.antigravity-server/.afdb915a7890576374cec17dccf6d91249170a86-ssh-auth.sock', 'AMENT_PREFIX_PATH': '/home/ubuntu/robot_ws/install/ubicoders_stereo_vo:/home/ubuntu/robot_ws/install/kitti_image_publisher:/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/miniconda/bin/python', 'DEBIAN_FRONTEND': 'noninteractive', 'CONDA_DEFAULT_ENV': 'base', '_CONDA_EXE': '/miniconda/bin/conda', 'CONDA_DIR': '/miniconda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo', 'LC_ALL': 'en_US.UTF-8', 'CONDA_EXE': '/miniconda/bin/conda', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/miniconda', 'TZ': 'UTC', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubuntu/robot_ws/install/ubicoders_stereo_vo:/home/ubuntu/robot_ws/install/kitti_image_publisher:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099330] (-) TimerEvent: {}
+[0.200065] (-) TimerEvent: {}
+[0.200529] (ubicoders_stereo_vo) StdoutLine: {'line': b'[ 50%] Built target sv_lib\n'}
+[0.300288] (-) TimerEvent: {}
+[0.400863] (-) TimerEvent: {}
+[0.501341] (-) TimerEvent: {}
+[0.526756] (ubicoders_stereo_vo) StdoutLine: {'line': b'[ 75%] \x1b[32mBuilding CXX object CMakeFiles/ubicoders_svo_node.dir/src/ubicoders_svo_node.cpp.o\x1b[0m\n'}
+[0.601536] (-) TimerEvent: {}
+[0.702093] (-) TimerEvent: {}
+[0.802717] (-) TimerEvent: {}
+[0.903333] (-) TimerEvent: {}
+[1.004107] (-) TimerEvent: {}
+[1.104645] (-) TimerEvent: {}
+[1.205171] (-) TimerEvent: {}
+[1.305718] (-) TimerEvent: {}
+[1.406230] (-) TimerEvent: {}
+[1.506897] (-) TimerEvent: {}
+[1.607487] (-) TimerEvent: {}
+[1.708082] (-) TimerEvent: {}
+[1.808724] (-) TimerEvent: {}
+[1.909438] (-) TimerEvent: {}
+[2.010093] (-) TimerEvent: {}
+[2.110676] (-) TimerEvent: {}
+[2.211371] (-) TimerEvent: {}
+[2.312050] (-) TimerEvent: {}
+[2.412777] (-) TimerEvent: {}
+[2.513344] (-) TimerEvent: {}
+[2.613921] (-) TimerEvent: {}
+[2.714519] (-) TimerEvent: {}
+[2.815215] (-) TimerEvent: {}
+[2.915775] (-) TimerEvent: {}
+[3.016393] (-) TimerEvent: {}
+[3.117039] (-) TimerEvent: {}
+[3.217589] (-) TimerEvent: {}
+[3.318150] (-) TimerEvent: {}
+[3.418767] (-) TimerEvent: {}
+[3.519295] (-) TimerEvent: {}
+[3.620088] (-) TimerEvent: {}
+[3.720789] (-) TimerEvent: {}
+[3.821445] (-) TimerEvent: {}
+[3.922008] (-) TimerEvent: {}
+[4.022534] (-) TimerEvent: {}
+[4.123068] (-) TimerEvent: {}
+[4.223586] (-) TimerEvent: {}
+[4.324121] (-) TimerEvent: {}
+[4.424631] (-) TimerEvent: {}
+[4.525270] (-) TimerEvent: {}
+[4.625866] (-) TimerEvent: {}
+[4.726433] (-) TimerEvent: {}
+[4.827033] (-) TimerEvent: {}
+[4.927584] (-) TimerEvent: {}
+[5.028205] (-) TimerEvent: {}
+[5.128894] (-) TimerEvent: {}
+[5.229539] (-) TimerEvent: {}
+[5.330284] (-) TimerEvent: {}
+[5.430984] (-) TimerEvent: {}
+[5.531672] (-) TimerEvent: {}
+[5.632295] (-) TimerEvent: {}
+[5.732868] (-) TimerEvent: {}
+[5.833541] (-) TimerEvent: {}
+[5.934148] (-) TimerEvent: {}
+[6.034819] (-) TimerEvent: {}
+[6.135380] (-) TimerEvent: {}
+[6.236070] (-) TimerEvent: {}
+[6.336847] (-) TimerEvent: {}
+[6.437537] (-) TimerEvent: {}
+[6.538214] (-) TimerEvent: {}
+[6.638992] (-) TimerEvent: {}
+[6.739737] (-) TimerEvent: {}
+[6.840362] (-) TimerEvent: {}
+[6.940959] (-) TimerEvent: {}
+[7.041496] (-) TimerEvent: {}
+[7.141982] (-) TimerEvent: {}
+[7.242535] (-) TimerEvent: {}
+[7.343128] (-) TimerEvent: {}
+[7.443784] (-) TimerEvent: {}
+[7.544367] (-) TimerEvent: {}
+[7.644961] (-) TimerEvent: {}
+[7.745519] (-) TimerEvent: {}
+[7.846080] (-) TimerEvent: {}
+[7.946630] (-) TimerEvent: {}
+[8.047234] (-) TimerEvent: {}
+[8.147850] (-) TimerEvent: {}
+[8.248415] (-) TimerEvent: {}
+[8.349029] (-) TimerEvent: {}
+[8.449666] (-) TimerEvent: {}
+[8.550327] (-) TimerEvent: {}
+[8.650952] (-) TimerEvent: {}
+[8.751611] (-) TimerEvent: {}
+[8.852328] (-) TimerEvent: {}
+[8.953076] (-) TimerEvent: {}
+[9.053730] (-) TimerEvent: {}
+[9.154316] (-) TimerEvent: {}
+[9.254912] (-) TimerEvent: {}
+[9.355527] (-) TimerEvent: {}
+[9.456200] (-) TimerEvent: {}
+[9.556854] (-) TimerEvent: {}
+[9.657547] (-) TimerEvent: {}
+[9.758256] (-) TimerEvent: {}
+[9.858967] (-) TimerEvent: {}
+[9.959646] (-) TimerEvent: {}
+[10.060271] (-) TimerEvent: {}
+[10.161033] (-) TimerEvent: {}
+[10.261640] (-) TimerEvent: {}
+[10.362274] (-) TimerEvent: {}
+[10.462970] (-) TimerEvent: {}
+[10.563663] (-) TimerEvent: {}
+[10.664153] (-) TimerEvent: {}
+[10.764728] (-) TimerEvent: {}
+[10.865293] (-) TimerEvent: {}
+[10.965870] (-) TimerEvent: {}
+[11.066423] (-) TimerEvent: {}
+[11.167022] (-) TimerEvent: {}
+[11.267576] (-) TimerEvent: {}
+[11.368220] (-) TimerEvent: {}
+[11.468952] (-) TimerEvent: {}
+[11.569728] (-) TimerEvent: {}
+[11.670525] (-) TimerEvent: {}
+[11.771208] (-) TimerEvent: {}
+[11.871847] (-) TimerEvent: {}
+[11.972316] (-) TimerEvent: {}
+[12.072937] (-) TimerEvent: {}
+[12.173567] (-) TimerEvent: {}
+[12.274191] (-) TimerEvent: {}
+[12.374744] (-) TimerEvent: {}
+[12.475423] (-) TimerEvent: {}
+[12.576115] (-) TimerEvent: {}
+[12.676779] (-) TimerEvent: {}
+[12.777215] (-) TimerEvent: {}
+[12.877782] (-) TimerEvent: {}
+[12.978306] (-) TimerEvent: {}
+[13.078775] (-) TimerEvent: {}
+[13.179444] (-) TimerEvent: {}
+[13.280088] (-) TimerEvent: {}
+[13.380737] (-) TimerEvent: {}
+[13.481359] (-) TimerEvent: {}
+[13.582082] (-) TimerEvent: {}
+[13.682728] (-) TimerEvent: {}
+[13.783329] (-) TimerEvent: {}
+[13.883902] (-) TimerEvent: {}
+[13.984603] (-) TimerEvent: {}
+[14.085259] (-) TimerEvent: {}
+[14.186035] (-) TimerEvent: {}
+[14.286643] (-) TimerEvent: {}
+[14.387286] (-) TimerEvent: {}
+[14.487891] (-) TimerEvent: {}
+[14.588542] (-) TimerEvent: {}
+[14.689066] (-) TimerEvent: {}
+[14.789760] (-) TimerEvent: {}
+[14.890487] (-) TimerEvent: {}
+[14.991069] (-) TimerEvent: {}
+[15.091680] (-) TimerEvent: {}
+[15.192366] (-) TimerEvent: {}
+[15.293007] (-) TimerEvent: {}
+[15.393667] (-) TimerEvent: {}
+[15.494270] (-) TimerEvent: {}
+[15.594905] (-) TimerEvent: {}
+[15.695493] (-) TimerEvent: {}
+[15.796167] (-) TimerEvent: {}
+[15.896903] (-) TimerEvent: {}
+[15.997433] (-) TimerEvent: {}
+[16.098032] (-) TimerEvent: {}
+[16.198583] (-) TimerEvent: {}
+[16.299183] (-) TimerEvent: {}
+[16.399862] (-) TimerEvent: {}
+[16.500518] (-) TimerEvent: {}
+[16.601268] (-) TimerEvent: {}
+[16.701941] (-) TimerEvent: {}
+[16.802477] (-) TimerEvent: {}
+[16.903025] (-) TimerEvent: {}
+[17.003590] (-) TimerEvent: {}
+[17.061667] (ubicoders_stereo_vo) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable ubicoders_svo_node\x1b[0m\n'}
+[17.103736] (-) TimerEvent: {}
+[17.204239] (-) TimerEvent: {}
+[17.304801] (-) TimerEvent: {}
+[17.405370] (-) TimerEvent: {}
+[17.505997] (-) TimerEvent: {}
+[17.606779] (-) TimerEvent: {}
+[17.707300] (-) TimerEvent: {}
+[17.807772] (-) TimerEvent: {}
+[17.908405] (-) TimerEvent: {}
+[18.009062] (-) TimerEvent: {}
+[18.109707] (-) TimerEvent: {}
+[18.210246] (-) TimerEvent: {}
+[18.310822] (-) TimerEvent: {}
+[18.411338] (-) TimerEvent: {}
+[18.511932] (-) TimerEvent: {}
+[18.612492] (-) TimerEvent: {}
+[18.713053] (-) TimerEvent: {}
+[18.813562] (-) TimerEvent: {}
+[18.914124] (-) TimerEvent: {}
+[19.014802] (-) TimerEvent: {}
+[19.093420] (ubicoders_stereo_vo) StdoutLine: {'line': b'[100%] Built target ubicoders_svo_node\n'}
+[19.114973] (-) TimerEvent: {}
+[19.131991] (ubicoders_stereo_vo) CommandEnded: {'returncode': 0}
+[19.134441] (ubicoders_stereo_vo) JobProgress: {'identifier': 'ubicoders_stereo_vo', 'progress': 'install'}
+[19.165032] (ubicoders_stereo_vo) Command: {'cmd': ['/usr/bin/cmake', '--install', '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo'], 'cwd': '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(base)', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'elcom', 'GIT_ASKPASS': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/bin/helpers/browser.sh', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/root', 'CONDA_SHLVL': '1', 'TERM_PROGRAM_VERSION': '1.104.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-c0531dbb-58d5-4f0b-bf4e-3f85c33b26e3.sock', 'ROS_PYTHON_VERSION': '3', 'VSCODE_GIT_ASKPASS_MAIN': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', '_CE_M': '', 'REMOTE_CONTAINERS': 'true', '_CONDA_ROOT': '/miniconda', 'COLCON_PREFIX_PATH': '/home/ubuntu/robot_ws/install', 'ROS_DISTRO': 'jazzy', '_': '/miniconda/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', '_CE_CONDA': '', 'QT_X11_NO_MITSHM': '1', 'PATH': '/miniconda/bin:/miniconda/condabin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/bin/remote-cli:/miniconda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-bef8ffe844.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/root/.antigravity-server/.afdb915a7890576374cec17dccf6d91249170a86-ssh-auth.sock', 'AMENT_PREFIX_PATH': '/home/ubuntu/robot_ws/install/ubicoders_stereo_vo:/home/ubuntu/robot_ws/install/kitti_image_publisher:/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/miniconda/bin/python', 'DEBIAN_FRONTEND': 'noninteractive', 'CONDA_DEFAULT_ENV': 'base', '_CONDA_EXE': '/miniconda/bin/conda', 'CONDA_DIR': '/miniconda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo', 'LC_ALL': 'en_US.UTF-8', 'CONDA_EXE': '/miniconda/bin/conda', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/miniconda', 'TZ': 'UTC', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/home/ubuntu/robot_ws/install/ubicoders_stereo_vo:/home/ubuntu/robot_ws/install/kitti_image_publisher:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[19.193673] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[19.195740] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[19.196801] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/lib/ubicoders_stereo_vo/ubicoders_svo_node\n'}
+[19.198648] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ament_index/resource_index/package_run_dependencies/ubicoders_stereo_vo\n'}
+[19.199660] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ament_index/resource_index/parent_prefix_path/ubicoders_stereo_vo\n'}
+[19.200442] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/environment/ament_prefix_path.sh\n'}
+[19.201117] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/environment/ament_prefix_path.dsv\n'}
+[19.201880] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/environment/path.sh\n'}
+[19.202762] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/environment/path.dsv\n'}
+[19.203596] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/local_setup.bash\n'}
+[19.204570] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/local_setup.sh\n'}
+[19.205530] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/local_setup.zsh\n'}
+[19.206146] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/local_setup.dsv\n'}
+[19.206791] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Symlinking: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/package.dsv\n'}
+[19.215157] (-) TimerEvent: {}
+[19.239931] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ament_index/resource_index/packages/ubicoders_stereo_vo\n'}
+[19.240959] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/cmake/ubicoders_stereo_voConfig.cmake\n'}
+[19.241977] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/cmake/ubicoders_stereo_voConfig-version.cmake\n'}
+[19.243302] (ubicoders_stereo_vo) StdoutLine: {'line': b'-- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/package.xml\n'}
+[19.249055] (ubicoders_stereo_vo) CommandEnded: {'returncode': 0}
+[19.315304] (-) TimerEvent: {}
+[19.318667] (ubicoders_stereo_vo) JobEnded: {'identifier': 'ubicoders_stereo_vo', 'rc': 0}
+[19.320977] (-) EventReactorShutdown: {}

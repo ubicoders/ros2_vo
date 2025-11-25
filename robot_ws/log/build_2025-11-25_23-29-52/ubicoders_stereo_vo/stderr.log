@@ -1,0 +1,14 @@
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_node.cpp:[m[K In member function ‘[01m[Kvoid UbicodersSVO::UbicodersSVO::[01;32m[KimageCallback[m[K(const sensor_msgs::msg::Image_<std::allocator<void> >::ConstSharedPtr&, const sensor_msgs::msg::Image_<std::allocator<void> >::ConstSharedPtr&)[m[K’:
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_node.cpp:37:70:[m[K [01;31m[Kerror: [m[Kcannot convert ‘[01m[Kconst sensor_msgs::msg::Image_<std::allocator<void> >::_encoding_type[m[K’ {aka ‘[01m[Kconst std::__cxx11::basic_string<char>[m[K’} to ‘[01m[Kconst cv::Mat&[m[K’
+   37 |   UbicodersSVOPublishers::getInstance().publishDebugImage([01;31m[KleftImage->encoding[m[K,
+      |                                                           [01;31m[K~~~~~~~~~~~^~~~~~~~[m[K
+      |                                                                      [01;31m[K|[m[K
+      |                                                                      [01;31m[Kconst sensor_msgs::msg::Image_<std::allocator<void> >::_encoding_type {aka const std::__cxx11::basic_string<char>}[m[K
+In file included from [01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:4[m[K,
+                 from [01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_node.cpp:1[m[K:
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_publishers.hpp:27:41:[m[K [01;36m[Knote: [m[K  initializing argument 1 of ‘[01m[Kvoid UbicodersSVO::UbicodersSVOPublishers::[01;32m[KpublishDebugImage[m[K(const cv::Mat&, const std_msgs::msg::Header&)[m[K’
+   27 |   void publishDebugImage([01;36m[Kconst cv::Mat &image[m[K,
+      |                          [01;36m[K~~~~~~~~~~~~~~~^~~~~[m[K
+gmake[2]: *** [CMakeFiles/ubicoders_svo_node.dir/build.make:76: CMakeFiles/ubicoders_svo_node.dir/src/ubicoders_svo_node.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/ubicoders_svo_node.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

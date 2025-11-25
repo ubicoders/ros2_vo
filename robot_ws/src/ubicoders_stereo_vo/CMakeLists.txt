@@ -24,7 +24,7 @@ find_package(Sophus REQUIRED)
 
 
 add_library(${library_name}
-  src/ubicoders_svo_node.cpp
+  src/ubicoders_svo_publishers.cpp
   # src/frontend.cpp
   # src/backend.cpp
   # src/map_point.cpp

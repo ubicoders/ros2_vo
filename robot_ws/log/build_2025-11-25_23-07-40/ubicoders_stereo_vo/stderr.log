@@ -1,0 +1,10 @@
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_publishers.cpp:5:1:[m[K [01;31m[Kerror: [m[Kredefinition of ‘[01m[KUbicodersSVO::UbicodersSVOPublishers::[01;32m[KUbicodersSVOPublishers[m[K()[m[K’
+    5 | [01;31m[KUbicodersSVOPublishers[m[K::UbicodersSVOPublishers() {}
+      | [01;31m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+In file included from [01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_publishers.cpp:1[m[K:
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_publishers.hpp:33:3:[m[K [01;36m[Knote: [m[K‘[01m[KUbicodersSVO::UbicodersSVOPublishers::[01;32m[KUbicodersSVOPublishers[m[K()[m[K’ previously defined here
+   33 |   [01;36m[KUbicodersSVOPublishers[m[K() {}
+      |   [01;36m[K^~~~~~~~~~~~~~~~~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/sv_lib.dir/build.make:76: CMakeFiles/sv_lib.dir/src/ubicoders_svo_publishers.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/sv_lib.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

@@ -3,6 +3,6 @@
 
 ## colcon build --packages-select stereo_visual_slam 
 
-colcon build --packages-select stereo_visual_slam --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && source install/setup.bash 
+colcon build --packages-select ubicoders_stereo_vo --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON && source install/setup.bash 
 
-colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON  --symlink-install
+#colcon build --cmake-args -DCMAKE_EXPORT_COMPILE_COMMANDS=ON  --symlink-install

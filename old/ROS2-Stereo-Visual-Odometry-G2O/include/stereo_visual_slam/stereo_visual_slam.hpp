@@ -21,6 +21,7 @@
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <tf2_eigen/tf2_eigen.hpp>
 #include <tf2_ros/transform_broadcaster.h>
+
 namespace StereoSLAM {
 class StereoVisualSLAM : public rclcpp::Node {
 public:

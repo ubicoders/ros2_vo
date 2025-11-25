@@ -1,0 +1,26 @@
+[0.024s] Invoking command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ubuntu/robot_ws/build/ubicoders_stereo_vo -- -j28 -l28
+[0.228s] [ 50%] Built target sv_lib
+[0.630s] [ 75%] [32mBuilding CXX object CMakeFiles/ubicoders_svo_node.dir/src/ubicoders_svo_node.cpp.o[0m
+[17.567s] [100%] [32m[1mLinking CXX executable ubicoders_svo_node[0m
+[19.665s] [100%] Built target ubicoders_svo_node
+[19.685s] Invoked command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ubuntu/robot_ws/build/ubicoders_stereo_vo -- -j28 -l28
+[19.715s] Invoking command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/ubuntu/robot_ws/build/ubicoders_stereo_vo
+[19.742s] -- Install configuration: ""
+[19.743s] -- Execute custom install script
+[19.745s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/lib/ubicoders_stereo_vo/ubicoders_svo_node
+[19.748s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ament_index/resource_index/package_run_dependencies/ubicoders_stereo_vo
+[19.749s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ament_index/resource_index/parent_prefix_path/ubicoders_stereo_vo
+[19.751s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/environment/ament_prefix_path.sh
+[19.752s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/environment/ament_prefix_path.dsv
+[19.753s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/environment/path.sh
+[19.755s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/environment/path.dsv
+[19.756s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/local_setup.bash
+[19.757s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/local_setup.sh
+[19.760s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/local_setup.zsh
+[19.761s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/local_setup.dsv
+[19.762s] -- Symlinking: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/package.dsv
+[19.788s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ament_index/resource_index/packages/ubicoders_stereo_vo
+[19.789s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/cmake/ubicoders_stereo_voConfig.cmake
+[19.790s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/cmake/ubicoders_stereo_voConfig-version.cmake
+[19.791s] -- Up-to-date symlink: /home/ubuntu/robot_ws/install/ubicoders_stereo_vo/share/ubicoders_stereo_vo/package.xml
+[19.797s] Invoked command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --install /home/ubuntu/robot_ws/build/ubicoders_stereo_vo

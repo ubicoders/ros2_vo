@@ -1,0 +1,120 @@
+[0.000000] (-) TimerEvent: {}
+[0.000450] (-) JobUnselected: {'identifier': 'kitti_image_publisher'}
+[0.000660] (ubicoders_stereo_vo) JobQueued: {'identifier': 'ubicoders_stereo_vo', 'dependencies': OrderedDict()}
+[0.000755] (ubicoders_stereo_vo) JobStarted: {'identifier': 'ubicoders_stereo_vo'}
+[0.016673] (ubicoders_stereo_vo) JobProgress: {'identifier': 'ubicoders_stereo_vo', 'progress': 'cmake'}
+[0.019640] (ubicoders_stereo_vo) JobProgress: {'identifier': 'ubicoders_stereo_vo', 'progress': 'build'}
+[0.021185] (ubicoders_stereo_vo) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo', '--', '-j28', '-l28'], 'cwd': '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo', 'env': OrderedDict({'CONDA_PROMPT_MODIFIER': '(base)', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'HOSTNAME': 'elcom', 'GIT_ASKPASS': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/extensions/git/dist/askpass.sh', 'SHLVL': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'BROWSER': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/bin/helpers/browser.sh', 'ANTIGRAVITY_CLI_ALIAS': 'agy', 'HOME': '/root', 'CONDA_SHLVL': '1', 'TERM_PROGRAM_VERSION': '1.104.0', 'VSCODE_IPC_HOOK_CLI': '/tmp/vscode-ipc-2de05b3e-57f7-4f57-99bd-d7636ae5aa12.sock', 'ROS_PYTHON_VERSION': '3', 'PAGER': 'cat', 'VSCODE_GIT_ASKPASS_MAIN': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/extensions/git/dist/askpass-main.js', 'VSCODE_GIT_ASKPASS_NODE': '/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/node', 'VSCODE_PYTHON_AUTOACTIVATE_GUARD': '1', 'COLORTERM': 'truecolor', '_CE_M': '', 'REMOTE_CONTAINERS': 'true', '_CONDA_ROOT': '/miniconda', 'ANTIGRAVITY_AGENT': '1', 'ROS_DISTRO': 'jazzy', '_': '/miniconda/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm-256color', '_CE_CONDA': '', 'QT_X11_NO_MITSHM': '1', 'PATH': '/miniconda/bin:/miniconda/condabin:/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/root/.antigravity-server/bin/afdb915a7890576374cec17dccf6d91249170a86/bin/remote-cli:/miniconda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'en_US.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'VSCODE_GIT_IPC_HANDLE': '/tmp/vscode-git-bef8ffe844.sock', 'TERM_PROGRAM': 'vscode', 'SSH_AUTH_SOCK': '/root/.antigravity-server/.afdb915a7890576374cec17dccf6d91249170a86-ssh-auth.sock', 'AMENT_PREFIX_PATH': '/opt/ros/jazzy', 'CONDA_PYTHON_EXE': '/miniconda/bin/python', 'DEBIAN_FRONTEND': 'noninteractive', 'CONDA_DEFAULT_ENV': 'base', '_CONDA_EXE': '/miniconda/bin/conda', 'CONDA_DIR': '/miniconda', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'VSCODE_GIT_ASKPASS_EXTRA_ARGS': '', 'PWD': '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo', 'LC_ALL': 'en_US.UTF-8', 'CONDA_EXE': '/miniconda/bin/conda', 'PYTHONPATH': '/opt/ros/jazzy/lib/python3.12/site-packages', 'CONDA_PREFIX': '/miniconda', 'TZ': 'UTC', 'COLCON': '1', 'CMAKE_PREFIX_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy'}), 'shell': False}
+[0.099627] (-) TimerEvent: {}
+[0.200234] (-) TimerEvent: {}
+[0.300770] (-) TimerEvent: {}
+[0.401304] (-) TimerEvent: {}
+[0.406797] (ubicoders_stereo_vo) StdoutLine: {'line': b'[ 25%] \x1b[32mBuilding CXX object CMakeFiles/sv_lib.dir/src/ubicoders_svo_node.cpp.o\x1b[0m\n'}
+[0.501436] (-) TimerEvent: {}
+[0.602056] (-) TimerEvent: {}
+[0.702516] (-) TimerEvent: {}
+[0.803216] (-) TimerEvent: {}
+[0.903642] (-) TimerEvent: {}
+[1.004037] (-) TimerEvent: {}
+[1.104618] (-) TimerEvent: {}
+[1.204972] (-) TimerEvent: {}
+[1.305532] (-) TimerEvent: {}
+[1.407779] (-) TimerEvent: {}
+[1.506826] (ubicoders_stereo_vo) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_node.cpp:1\x1b[m\x1b[K:\n'}
+[1.507647] (ubicoders_stereo_vo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:1:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[Kunterminated #ifndef\n'}
+[1.508310] (-) TimerEvent: {}
+[1.508585] (ubicoders_stereo_vo) StderrLine: {'line': b'    1 | #ifndef __UBICODERS_SVO_NODE_H__\n'}
+[1.509130] (ubicoders_stereo_vo) StderrLine: {'line': b'      | \n'}
+[1.608437] (-) TimerEvent: {}
+[1.708897] (-) TimerEvent: {}
+[1.809444] (-) TimerEvent: {}
+[1.910055] (-) TimerEvent: {}
+[2.010575] (-) TimerEvent: {}
+[2.111086] (-) TimerEvent: {}
+[2.211510] (-) TimerEvent: {}
+[2.312075] (-) TimerEvent: {}
+[2.412508] (-) TimerEvent: {}
+[2.513037] (-) TimerEvent: {}
+[2.613767] (-) TimerEvent: {}
+[2.714219] (-) TimerEvent: {}
+[2.814897] (-) TimerEvent: {}
+[2.915571] (-) TimerEvent: {}
+[3.016142] (-) TimerEvent: {}
+[3.116757] (-) TimerEvent: {}
+[3.217177] (-) TimerEvent: {}
+[3.317682] (-) TimerEvent: {}
+[3.418204] (-) TimerEvent: {}
+[3.518758] (-) TimerEvent: {}
+[3.619243] (-) TimerEvent: {}
+[3.719721] (-) TimerEvent: {}
+[3.820273] (-) TimerEvent: {}
+[3.920752] (-) TimerEvent: {}
+[4.021222] (-) TimerEvent: {}
+[4.121851] (-) TimerEvent: {}
+[4.222249] (-) TimerEvent: {}
+[4.323332] (-) TimerEvent: {}
+[4.424494] (-) TimerEvent: {}
+[4.524959] (-) TimerEvent: {}
+[4.625433] (-) TimerEvent: {}
+[4.725867] (-) TimerEvent: {}
+[4.826405] (-) TimerEvent: {}
+[4.926853] (-) TimerEvent: {}
+[5.027386] (-) TimerEvent: {}
+[5.127916] (-) TimerEvent: {}
+[5.228355] (-) TimerEvent: {}
+[5.328953] (-) TimerEvent: {}
+[5.429421] (-) TimerEvent: {}
+[5.529967] (-) TimerEvent: {}
+[5.630565] (-) TimerEvent: {}
+[5.731079] (-) TimerEvent: {}
+[5.831711] (-) TimerEvent: {}
+[5.932229] (-) TimerEvent: {}
+[6.033021] (-) TimerEvent: {}
+[6.133600] (-) TimerEvent: {}
+[6.231251] (ubicoders_stereo_vo) StderrLine: {'line': b'In file included from \x1b[01m\x1b[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_publishers.hpp:13\x1b[m\x1b[K,\n'}
+[6.231743] (ubicoders_stereo_vo) StderrLine: {'line': b'                 from \x1b[01m\x1b[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/ubicoders_svo_node.hpp:4\x1b[m\x1b[K:\n'}
+[6.232033] (ubicoders_stereo_vo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/config.hpp:17:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[KK\x1b[m\x1b[K\xe2\x80\x99 does not name a type\n'}
+[6.232295] (ubicoders_stereo_vo) StderrLine: {'line': b'   17 |   \x1b[01;31m\x1b[KK\x1b[m\x1b[K << fx, 0, cx, 0, fy, cy, 0, 0, 1;\n'}
+[6.232556] (ubicoders_stereo_vo) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.233682] (-) TimerEvent: {}
+[6.248383] (ubicoders_stereo_vo) StderrLine: {'line': b'\x1b[01m\x1b[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/include/ubicoders_stereo_vo/config.hpp:20:3:\x1b[m\x1b[K \x1b[01;31m\x1b[Kerror: \x1b[m\x1b[K\xe2\x80\x98\x1b[01m\x1b[Kt\x1b[m\x1b[K\xe2\x80\x99 does not name a type; did you mean \xe2\x80\x98\x1b[01m\x1b[Ktm\x1b[m\x1b[K\xe2\x80\x99?\n'}
+[6.249053] (ubicoders_stereo_vo) StderrLine: {'line': b'   20 |   \x1b[01;31m\x1b[Kt\x1b[m\x1b[K << 0, 0, 0;\n'}
+[6.249381] (ubicoders_stereo_vo) StderrLine: {'line': b'      |   \x1b[01;31m\x1b[K^\x1b[m\x1b[K\n'}
+[6.249716] (ubicoders_stereo_vo) StderrLine: {'line': b'      |   \x1b[32m\x1b[Ktm\x1b[m\x1b[K\n'}
+[6.333818] (-) TimerEvent: {}
+[6.435758] (-) TimerEvent: {}
+[6.536357] (-) TimerEvent: {}
+[6.636900] (-) TimerEvent: {}
+[6.737378] (-) TimerEvent: {}
+[6.838039] (-) TimerEvent: {}
+[6.938575] (-) TimerEvent: {}
+[7.039117] (-) TimerEvent: {}
+[7.139712] (-) TimerEvent: {}
+[7.240242] (-) TimerEvent: {}
+[7.340852] (-) TimerEvent: {}
+[7.441264] (-) TimerEvent: {}
+[7.541929] (-) TimerEvent: {}
+[7.642551] (-) TimerEvent: {}
+[7.743129] (-) TimerEvent: {}
+[7.843626] (-) TimerEvent: {}
+[7.944072] (-) TimerEvent: {}
+[8.044548] (-) TimerEvent: {}
+[8.144979] (-) TimerEvent: {}
+[8.245466] (-) TimerEvent: {}
+[8.345832] (-) TimerEvent: {}
+[8.446275] (-) TimerEvent: {}
+[8.546662] (-) TimerEvent: {}
+[8.647294] (-) TimerEvent: {}
+[8.747907] (-) TimerEvent: {}
+[8.848530] (-) TimerEvent: {}
+[8.949015] (-) TimerEvent: {}
+[9.049565] (-) TimerEvent: {}
+[9.150051] (-) TimerEvent: {}
+[9.250464] (-) TimerEvent: {}
+[9.293626] (ubicoders_stereo_vo) StderrLine: {'line': b'gmake[2]: *** [CMakeFiles/sv_lib.dir/build.make:76: CMakeFiles/sv_lib.dir/src/ubicoders_svo_node.cpp.o] Error 1\n'}
+[9.294820] (ubicoders_stereo_vo) StderrLine: {'line': b'gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/sv_lib.dir/all] Error 2\n'}
+[9.295626] (ubicoders_stereo_vo) StderrLine: {'line': b'gmake: *** [Makefile:146: all] Error 2\n'}
+[9.301864] (ubicoders_stereo_vo) CommandEnded: {'returncode': 2}
+[9.341357] (ubicoders_stereo_vo) JobEnded: {'identifier': 'ubicoders_stereo_vo', 'rc': 2}
+[9.350525] (-) TimerEvent: {}
+[9.352133] (-) EventReactorShutdown: {}

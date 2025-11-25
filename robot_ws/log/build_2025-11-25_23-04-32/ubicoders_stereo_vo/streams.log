@@ -1,0 +1,13 @@
+[0.031s] Invoking command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ubuntu/robot_ws/build/ubicoders_stereo_vo -- -j28 -l28
+[0.433s] [ 25%] [32mBuilding CXX object CMakeFiles/sv_lib.dir/src/ubicoders_svo_node.cpp.o[0m
+[10.367s] [ 50%] [32m[1mLinking CXX static library libsv_lib.a[0m
+[10.573s] [ 50%] Built target sv_lib
+[10.765s] [ 75%] [32mBuilding CXX object CMakeFiles/ubicoders_svo_node.dir/src/ubicoders_svo_node.cpp.o[0m
+[20.688s] [100%] [32m[1mLinking CXX executable ubicoders_svo_node[0m
+[21.255s] /usr/bin/ld: CMakeFiles/ubicoders_svo_node.dir/src/ubicoders_svo_node.cpp.o: in function `UbicodersSVO::UbicodersSVO::UbicodersSVO()':
+[21.255s] ubicoders_svo_node.cpp:(.text+0x154): undefined reference to `UbicodersSVO::UbicodersSVOPublishers::init(rclcpp::Node*)'
+[21.418s] collect2: error: ld returned 1 exit status
+[21.420s] gmake[2]: *** [CMakeFiles/ubicoders_svo_node.dir/build.make:280: ubicoders_svo_node] Error 1
+[21.420s] gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/ubicoders_svo_node.dir/all] Error 2
+[21.421s] gmake: *** [Makefile:146: all] Error 2
+[21.426s] Invoked command in '/home/ubuntu/robot_ws/build/ubicoders_stereo_vo' returned '2': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy CONDA_PROMPT_MODIFIER=(base) /usr/bin/cmake --build /home/ubuntu/robot_ws/build/ubicoders_stereo_vo -- -j28 -l28
