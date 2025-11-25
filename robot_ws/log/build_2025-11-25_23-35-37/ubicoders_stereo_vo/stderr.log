@@ -1,0 +1,8 @@
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_publishers.cpp:[m[K In member function ‘[01m[Kvoid UbicodersSVO::UbicodersSVOPublishers::[01;32m[KpublishPointCloud[m[K(const sensor_msgs::msg::PointCloud2&)[m[K’:
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_publishers.cpp:27:42:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpc[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   27 |     [01;35m[Kconst sensor_msgs::msg::PointCloud2 &pc[m[K) {}
+      |     [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~[m[K
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_publishers.cpp:[m[K In member function ‘[01m[Kvoid UbicodersSVO::UbicodersSVOPublishers::[01;32m[KpublishPath[m[K(const nav_msgs::msg::Path&)[m[K’:
+[01m[K/home/ubuntu/robot_ws/src/ubicoders_stereo_vo/src/ubicoders_svo_publishers.cpp:29:69:[m[K [01;35m[Kwarning: [m[Kunused parameter ‘[01m[Kpath[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wunused-parameter-Wunused-parameter]8;;[m[K]
+   29 | void UbicodersSVOPublishers::publishPath([01;35m[Kconst nav_msgs::msg::Path &path[m[K) {}
+      |                                          [01;35m[K~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~[m[K
