@@ -1,6 +1,0 @@
-/usr/bin/ld: CMakeFiles/ubicoders_svo_node.dir/src/ubicoders_svo_node.cpp.o: in function `UbicodersSVO::UbicodersSVO::UbicodersSVO()':
-ubicoders_svo_node.cpp:(.text+0x154): undefined reference to `UbicodersSVO::UbicodersSVOPublishers::init(rclcpp::Node*)'
-collect2: error: ld returned 1 exit status
-gmake[2]: *** [CMakeFiles/ubicoders_svo_node.dir/build.make:280: ubicoders_svo_node] Error 1
-gmake[1]: *** [CMakeFiles/Makefile2:165: CMakeFiles/ubicoders_svo_node.dir/all] Error 2
-gmake: *** [Makefile:146: all] Error 2

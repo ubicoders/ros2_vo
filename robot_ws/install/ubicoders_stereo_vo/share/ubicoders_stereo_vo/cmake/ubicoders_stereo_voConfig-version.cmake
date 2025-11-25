@@ -1,1 +1,0 @@
-/home/ubuntu/robot_ws/build/ubicoders_stereo_vo/ament_cmake_core/ubicoders_stereo_voConfig-version.cmake

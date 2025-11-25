@@ -1,8 +1,0 @@
-source;share/ubicoders_stereo_vo/hook/cmake_prefix_path.ps1
-source;share/ubicoders_stereo_vo/hook/cmake_prefix_path.dsv
-source;share/ubicoders_stereo_vo/hook/cmake_prefix_path.sh
-source;share/ubicoders_stereo_vo/local_setup.bash
-source;share/ubicoders_stereo_vo/local_setup.dsv
-source;share/ubicoders_stereo_vo/local_setup.ps1
-source;share/ubicoders_stereo_vo/local_setup.sh
-source;share/ubicoders_stereo_vo/local_setup.zsh
