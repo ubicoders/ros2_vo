@@ -26,7 +26,7 @@ void Viewer::debugImageUpdate(const std::shared_ptr<Frame> frame) {
   for (size_t i = 0; i < frame->leftFeaturePtrs.size(); ++i) {
     auto &keyPoint = frame->leftFeaturePtrs[i];
     if (!keyPoint->isInlier) {
-      // color red for non-inliers (in tmers of ransac)
+      // color red for outliers (in tmers of ransac)
       cv::circle(debugImage, keyPoint->point.pt, 4, cv::Scalar(0, 0, 255), 1,
                  cv::LINE_4, 0);
     } else {
@@ -49,7 +49,7 @@ void Viewer::debugImageUpdate(const std::shared_ptr<Frame> frame) {
 
       // color yellow for map points that are inliers (in tmers of ransac)
       cv::line(debugImage, uvPoint, keyPoint->point.pt, cv::Scalar(0, 255, 255),
-               1);
+               3);
     }
   }
 

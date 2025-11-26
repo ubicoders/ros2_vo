@@ -1,6 +1,8 @@
 #include "stereo_visual_slam/pinhole_camera.hpp"
 #include <Eigen/src/Core/Matrix.h>
+
 namespace StereoSLAM {
+
 PinholeCamera::PinholeCamera() {
   fx = scamConfig.fx;
   fy = scamConfig.fy;
@@ -13,12 +15,22 @@ PinholeCamera::PinholeCamera() {
   K.at<double>(0, 0) = fx;
   K.at<double>(1, 1) = fy;
   K.at<double>(0, 2) = cx;
+  K.at<double>(0, 2) = cx;
   K.at<double>(1, 2) = cy;
+
+  T1 = (cv::Mat_<float>(3, 4) << 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0);
+
+  auto pose = T_l2r.matrix();
+  T2 = (cv::Mat_<float>(3, 4) << pose(0, 0), pose(0, 1), pose(0, 2), pose(0, 3),
+        pose(1, 0), pose(1, 1), pose(1, 2), pose(1, 3), pose(2, 0), pose(2, 1),
+        pose(2, 2), pose(2, 3));
 }
 
-Sophus::SE3d PinholeCamera::get_T_l2r() { return T_l2r; }
-
 cv::Mat PinholeCamera::get_K() { return K; }
+
+cv::Mat PinholeCamera::get_T1() { return T1; }
+
+cv::Mat PinholeCamera::get_T2() { return T2; }
 
 cv::Point2f PinholeCamera::pixel2camera(const cv::Point2f &p_p) {
 

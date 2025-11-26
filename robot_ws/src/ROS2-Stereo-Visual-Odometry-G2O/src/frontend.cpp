@@ -1,6 +1,7 @@
 #include "stereo_visual_slam/frontend.hpp"
 
 namespace StereoSLAM {
+
 Frontend::Frontend(std::shared_ptr<PinholeCamera> stereoCam,
                    std::shared_ptr<Map> map, std::shared_ptr<Backend> backend)
     : stereoCam(stereoCam), map(map), backend(backend) {
@@ -173,13 +174,16 @@ int16_t Frontend::trackingFeature() {
 }
 
 void Frontend::create3DMapPoint() {
-  auto framePose = currentFrame->T_c2w.inverse();
-  auto pose = stereoCam->get_T_l2r().matrix();
-  int16_t landmarkCount = 0;
+  Sophus::SE3d T_w2c = currentFrame->T_c2w.inverse();
+
   std::vector<cv::Point2f> leftPoints, rightPoints;
   std::vector<Feature::Ptr> features;
 
+  //  for all features in the current left frame,
   for (size_t i = 0; i < currentFrame->leftFeaturePtrs.size(); ++i) {
+
+    // if the feature is in the right frame and the feature is not a map point,
+    // add it to the leftPoints and rightPoints.
     if (currentFrame->rightFeaturePtrs[i] != nullptr &&
         currentFrame->leftFeaturePtrs[i]->mapPointPtr.expired()) {
       auto &feature = currentFrame->leftFeaturePtrs[i];
@@ -191,11 +195,8 @@ void Frontend::create3DMapPoint() {
     }
   }
 
-  cv::Mat T1 = (cv::Mat_<float>(3, 4) << 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0);
-
-  cv::Mat T2 = (cv::Mat_<float>(3, 4) << pose(0, 0), pose(0, 1), pose(0, 2),
-                pose(0, 3), pose(1, 0), pose(1, 1), pose(1, 2), pose(1, 3),
-                pose(2, 0), pose(2, 1), pose(2, 2), pose(2, 3));
+  cv::Mat T1 = stereoCam->get_T1();
+  cv::Mat T2 = stereoCam->get_T2();
 
   cv::Mat worldHomoPoints;
 
@@ -214,7 +215,7 @@ void Frontend::create3DMapPoint() {
     homogenousWorldPoint(3) = 1.0;
 
     if (homogenousWorldPoint(2) > 0 && homogenousWorldPoint(2) <= 50) {
-      homogenousWorldPoint = framePose * homogenousWorldPoint;
+      homogenousWorldPoint = T_w2c * homogenousWorldPoint;
 
       worldPoint(0) = homogenousWorldPoint(0);
       worldPoint(1) = homogenousWorldPoint(1);
@@ -226,11 +227,8 @@ void Frontend::create3DMapPoint() {
 
       features[i]->mapPointPtr = mapPointPtr;
       map->addMapPoint(mapPointPtr);
-      ++landmarkCount;
     }
   }
-
-  // std::cout << "Find Landmark: " << landmarkCount << std::endl;
 }
 
 int16_t Frontend::estimatePose() {
@@ -321,8 +319,9 @@ int16_t Frontend::estimatePose() {
 }
 
 void Frontend::updateObservation() {
-  // for all features in the current keyframe, update their observations
-  // meaning of the observation is the map point being observed by the feature
+  // for all features in the current keyframe, update their observations.
+  // The meaning of the observation is the map point being observed by the
+  // feature
   for (auto &feature : currentFrame->leftFeaturePtrs) {
     if (!feature->mapPointPtr.expired()) {
       auto mapPointPtr = feature->mapPointPtr.lock();

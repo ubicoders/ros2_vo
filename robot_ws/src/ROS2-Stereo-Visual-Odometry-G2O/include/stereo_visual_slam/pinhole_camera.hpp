@@ -14,7 +14,8 @@ public:
   PinholeCamera();
   // getters
   cv::Mat get_K();
-  Sophus::SE3d get_T_l2r();
+  cv::Mat get_T1();
+  cv::Mat get_T2();
 
   // functions
   cv::Point2f pixel2camera(const cv::Point2f &point);
@@ -32,6 +33,8 @@ private:
   double cy;
   double baseline;
   cv::Mat K;
+  cv::Mat T1; // left extrinsic, 3x4 matrix with identity matrix
+  cv::Mat T2; // right extrinsic, 3x4 matrix
   Sophus::SE3d T_l2r;
 };
 } // namespace StereoSLAM
