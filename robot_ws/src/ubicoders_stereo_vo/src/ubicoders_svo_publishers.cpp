@@ -24,8 +24,12 @@ void UbicodersSVOPublishers::publishDebugImage(
 }
 
 void UbicodersSVOPublishers::publishPointCloud(
-    const sensor_msgs::msg::PointCloud2 &pc) {}
+    const sensor_msgs::msg::PointCloud2 &pc) {
+  // TODO
+}
 
-void UbicodersSVOPublishers::publishPath(const nav_msgs::msg::Path &path) {}
+void UbicodersSVOPublishers::publishPath(const nav_msgs::msg::Path &path) {
+  // TODO
+}
 
 } // namespace UbicodersSVO

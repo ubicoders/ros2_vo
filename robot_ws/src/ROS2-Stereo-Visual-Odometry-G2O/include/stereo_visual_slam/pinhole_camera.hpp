@@ -1,0 +1,39 @@
+#ifndef __PINHOLE_CAMERA_H__
+#define __PINHOLE_CAMERA_H__
+
+#include "stereo_visual_slam/config.hpp"
+#include <Eigen/Dense>
+#include <opencv2/opencv.hpp>
+#include <sophus/se3.hpp>
+
+namespace StereoSLAM {
+
+class PinholeCamera {
+
+public:
+  PinholeCamera();
+  // getters
+  cv::Mat get_K();
+  Sophus::SE3d get_T_l2r();
+
+  // functions
+  cv::Point2f pixel2camera(const cv::Point2f &point);
+  Eigen::Vector2d world2pixel(const Eigen::Vector3d &p_w,
+                              const Sophus::SE3d &T_c_w);
+  Eigen::Vector3d world2camera(const Eigen::Vector3d &p_w,
+                               const Sophus::SE3d &T_c_w);
+  Eigen::Vector2d camera2pixel(const Eigen::Vector3d &p_c);
+
+private:
+  CameraConfig scamConfig;
+  double fx;
+  double fy;
+  double cx;
+  double cy;
+  double baseline;
+  cv::Mat K;
+  Sophus::SE3d T_l2r;
+};
+} // namespace StereoSLAM
+
+#endif // __PINHOLE_CAMERA_H__
