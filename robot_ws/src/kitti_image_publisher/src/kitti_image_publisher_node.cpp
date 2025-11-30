@@ -23,7 +23,7 @@ public:
   KittiImagePublisher() : rclcpp::Node("kitti_stereo_publisher") {
     dataset_root_ = this->declare_parameter<std::string>(
         "dataset_root", "/home/ubuntu/KITTI/odom/dataset");
-    sequence_ = this->declare_parameter<std::string>("sequence", "00");
+    sequence_ = this->declare_parameter<std::string>("sequence", "05");
     left_folder_ =
         this->declare_parameter<std::string>("left_folder", "image_0");
     right_folder_ =
@@ -32,7 +32,7 @@ public:
         this->declare_parameter<std::string>("frame_id", "kitti_camera");
     publish_rate_ = this->declare_parameter<double>("publish_rate", 10.0);
     start_index_param_ = this->declare_parameter<int>("start_index", 0);
-    repeat_sequence_ = this->declare_parameter<bool>("repeat", true);
+    repeat_sequence_ = this->declare_parameter<bool>("repeat", false);
 
     left_pub_ = this->create_publisher<sensor_msgs::msg::Image>(
         "/stereo/image_left", 10);

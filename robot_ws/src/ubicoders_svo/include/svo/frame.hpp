@@ -23,7 +23,7 @@ public:
   std::vector<std::shared_ptr<Feature>> leftFeaturePtrs;
   std::vector<std::shared_ptr<Feature>> rightFeaturePtrs;
 
-  Sophus::SE3d T_c2w; // camera to world: (0, 0, 0) camera position to world
+  Sophus::SE3d T_w2c; // world to camera: (0, 0, 0) camera position to world
                       // position, i.e Cam pose in World coordinate
 
   bool isKeyFrame = false;

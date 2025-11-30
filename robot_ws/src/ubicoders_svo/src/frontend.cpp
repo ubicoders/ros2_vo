@@ -59,7 +59,7 @@ void Frontend::tracking() {
 }
 
 void Frontend::init() {
-  currentFrame->T_c2w = Sophus::SE3d();
+  currentFrame->T_w2c = Sophus::SE3d();
   // currentFrame->T_d = Sophus::SE3d();
   createLeftFeature();
   matchInRight();
@@ -175,7 +175,7 @@ int16_t Frontend::trackingFeature() {
 }
 
 void Frontend::create3DMapPoint() {
-  Sophus::SE3d T_w2c = currentFrame->T_c2w.inverse();
+  Sophus::SE3d T_w2c = currentFrame->T_w2c.inverse();
 
   std::vector<cv::Point2f> leftPoints, rightPoints;
   std::vector<Feature::Ptr> features;
@@ -300,18 +300,18 @@ int16_t Frontend::estimatePose() {
       }
     }
 
-    currentFrame->T_c2w = Sophus::SE3d(eigenR, eigenT);
+    currentFrame->T_w2c = Sophus::SE3d(eigenR, eigenT);
 
   } else {
     // Pose estimation failed - use previous frame's pose as fallback
     // to avoid setting position to (0,0,0) which corrupts the trajectory
     std::cout << "pose estimate failed!!" << std::endl;
     if (prevFrame != nullptr) {
-      currentFrame->T_c2w = prevFrame->T_c2w;
+      currentFrame->T_w2c = prevFrame->T_w2c;
       std::cout << "Using previous frame's pose as fallback" << std::endl;
     } else {
       // No previous frame - set to identity (should only happen at startup)
-      currentFrame->T_c2w = Sophus::SE3d();
+      currentFrame->T_w2c = Sophus::SE3d();
       std::cout << "No previous frame - setting to identity" << std::endl;
     }
   }

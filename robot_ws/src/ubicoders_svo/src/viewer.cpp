@@ -40,7 +40,7 @@ void Viewer::debugImageUpdate(const std::shared_ptr<Frame> frame) {
       auto mapPoint = keyPoint->mapPointPtr.lock();
       auto frame = keyPoint->framePtr.lock();
       auto uv =
-          stereoCam_->world2pixel(mapPoint->getWorldPoint(), frame->T_c2w);
+          stereoCam_->world2pixel(mapPoint->getWorldPoint(), frame->T_w2c);
       auto uvPoint = cv::Point2f(uv(0), uv(1));
 
       // color magenta for map points that are not inliers (in tmers of ransac)
@@ -122,7 +122,7 @@ void Viewer::pathUpdate() {
 
   auto frames = map_->getKeyFrames();
   for (auto &[id, frame] : frames) {
-    auto updatePose = frame->T_c2w.inverse();
+    auto updatePose = frame->T_w2c.inverse();
     auto worldPose = updatePose;
 
     geometry_msgs::msg::PoseStamped poseStampMsg;

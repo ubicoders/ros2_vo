@@ -78,7 +78,7 @@ void Backend::optimize(Map::KeyFrameType &activeKeyframes,
 
   // --- Step 1: Add KeyFrame Vertices (Camera Poses) ---
   for (auto &[id, frame] : activeKeyframes) {
-    auto pose = frame->T_c2w;
+    auto pose = frame->T_w2c;
     // Convert Sophus SE3 pose to G2O SE3Quat format
     g2o::SE3Quat g2oPose(pose.rotationMatrix(), pose.translation());
 
@@ -209,7 +209,7 @@ void Backend::optimize(Map::KeyFrameType &activeKeyframes,
     Eigen::Vector3d t = poseEstimate.translation();
 
     // Write back the optimized pose to the KeyFrame object
-    activeKeyframes[id]->T_c2w = Sophus::SE3d(q, t);
+    activeKeyframes[id]->T_w2c = Sophus::SE3d(q, t);
     activeKeyframes[id]->needUpdate =
         true; // Flag to notify other modules (e.g., Viewer)
   }
