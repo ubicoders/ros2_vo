@@ -20,10 +20,14 @@ namespace fs = std::filesystem;
 
 class KittiImagePublisher : public rclcpp::Node {
 public:
-  KittiImagePublisher() : rclcpp::Node("kitti_stereo_publisher") {
+  KittiImagePublisher(const std::string &sequence_arg = "")
+      : rclcpp::Node("kitti_stereo_publisher") {
     dataset_root_ = this->declare_parameter<std::string>(
         "dataset_root", "/home/ubuntu/KITTI/odom/dataset");
-    sequence_ = this->declare_parameter<std::string>("sequence", "05");
+
+    std::string default_sequence = sequence_arg.empty() ? "00" : sequence_arg;
+    sequence_ =
+        this->declare_parameter<std::string>("sequence", default_sequence);
     left_folder_ =
         this->declare_parameter<std::string>("left_folder", "image_0");
     right_folder_ =
@@ -180,8 +184,15 @@ private:
 
 int main(int argc, char **argv) {
   rclcpp::init(argc, argv);
+
+  auto non_ros_args = rclcpp::remove_ros_arguments(argc, argv);
+  std::string sequence_arg = "";
+  if (non_ros_args.size() > 1) {
+    sequence_arg = non_ros_args[1];
+  }
+
   try {
-    auto node = std::make_shared<KittiImagePublisher>();
+    auto node = std::make_shared<KittiImagePublisher>(sequence_arg);
     rclcpp::spin(node);
   } catch (const std::exception &ex) {
     RCLCPP_FATAL(rclcpp::get_logger("kitti_stereo_publisher"),
