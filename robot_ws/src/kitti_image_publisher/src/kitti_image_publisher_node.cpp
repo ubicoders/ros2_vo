@@ -25,7 +25,12 @@ public:
     dataset_root_ = this->declare_parameter<std::string>(
         "dataset_root", "/home/ubuntu/KITTI/odom/dataset");
 
-    std::string default_sequence = sequence_arg.empty() ? "00" : sequence_arg;
+    std::string default_sequence = sequence_arg;
+    if (default_sequence.empty()) {
+      default_sequence = "00";
+    } else if (default_sequence.length() == 1) {
+      default_sequence = "0" + default_sequence;
+    }
     sequence_ =
         this->declare_parameter<std::string>("sequence", default_sequence);
     left_folder_ =
