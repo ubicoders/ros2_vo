@@ -22,6 +22,7 @@
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <tf2_eigen/tf2_eigen.hpp>
 #include <tf2_ros/transform_broadcaster.h>
+#include <visualization_msgs/msg/marker.hpp> // Added for frustum visualization
 
 namespace UbiSVO {
 
@@ -47,6 +48,7 @@ private:
   rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr debugImagePub_;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pointCloudPub_;
   rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr pathPub_;
+  rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr markerPub_;
 
   // VO components
   std::unique_ptr<Viewer> viewer;

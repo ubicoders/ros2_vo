@@ -42,6 +42,12 @@ private:
   cv::Ptr<cv::ORB> orb;
 
   bool use_backend = true;
+
+  // Low-pass filter variables
+  cv::Mat rVecFiltered;
+  cv::Mat tVecFiltered;
+  bool isFilterInitialized = false;
+  const double filterAlpha = 0.9;
 };
 } // namespace UbiSVO
 

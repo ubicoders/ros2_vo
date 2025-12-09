@@ -13,6 +13,9 @@
 #include <sensor_msgs/msg/point_cloud2.hpp>
 #include <sensor_msgs/point_cloud2_iterator.hpp>
 
+#include <visualization_msgs/msg/marker.hpp> // Added for single Marker if decided against Array, but Array is safer for future.
+#include <visualization_msgs/msg/marker_array.hpp>
+
 namespace UbiSVO {
 class Viewer {
 public:
@@ -21,13 +24,15 @@ public:
       rclcpp::Clock::SharedPtr clock,
       rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr debugImagePub,
       rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pointCloudPub,
-      rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr pathPub);
+      rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr pathPub,
+      rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr markerPub);
   void update();
   void debugImageUpdate(const std::shared_ptr<Frame> frame);
 
 private:
   void mapPointUpdate();
   void pathUpdate();
+  void publishCameraFrustum(const Sophus::SE3d &T_w2c);
 
 private:
   ROS2NodeConfig ros2NodeConfig;
@@ -38,6 +43,7 @@ private:
   rclcpp::Publisher<sensor_msgs::msg::Image>::SharedPtr debugImagePub_;
   rclcpp::Publisher<sensor_msgs::msg::PointCloud2>::SharedPtr pointCloudPub_;
   rclcpp::Publisher<nav_msgs::msg::Path>::SharedPtr pathPub_;
+  rclcpp::Publisher<visualization_msgs::msg::Marker>::SharedPtr markerPub_;
 
   sensor_msgs::msg::PointCloud2 pointCloudMsg_;
 

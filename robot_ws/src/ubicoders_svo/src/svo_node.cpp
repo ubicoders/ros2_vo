@@ -24,6 +24,10 @@ StereoVisualOdometry::StereoVisualOdometry(const rclcpp::NodeOptions &options)
       ros2NodeConfig.output_pc_topic, 10);
   pathPub_ = this->create_publisher<nav_msgs::msg::Path>(
       ros2NodeConfig.output_path_topic, 10);
+  // Using a hardcoded topic for now, or could add to config
+  markerPub_ = this->create_publisher<visualization_msgs::msg::Marker>(
+      ros2NodeConfig.output_marker_topic, 10);
+
   double frequency = ros2NodeConfig.msg_pub_rate;
   auto interval = std::chrono::duration<double>(1.0 / frequency);
   timer_ =
@@ -35,7 +39,8 @@ StereoVisualOdometry::StereoVisualOdometry(const rclcpp::NodeOptions &options)
   backend = std::make_shared<Backend>(stereoCam, map);
   frontend = std::make_shared<Frontend>(stereoCam, map, backend);
   viewer = std::make_unique<Viewer>(map, stereoCam, this->get_clock(),
-                                    debugImagePub_, pointCloudPub_, pathPub_);
+                                    debugImagePub_, pointCloudPub_, pathPub_,
+                                    markerPub_);
 }
 
 void StereoVisualOdometry::ImageCallback(
@@ -49,8 +54,17 @@ void StereoVisualOdometry::ImageCallback(
   auto CVImageR = cv_bridge::toCvCopy(rightImage, rightImage->encoding)->image;
 
   // convert to grayscale
-  cv::cvtColor(CVImageL, frame->imageL, cv::COLOR_BGR2GRAY);
-  cv::cvtColor(CVImageR, frame->imageR, cv::COLOR_BGR2GRAY);
+  if (CVImageL.channels() == 3) {
+    cv::cvtColor(CVImageL, frame->imageL, cv::COLOR_BGR2GRAY);
+  } else {
+    frame->imageL = CVImageL;
+  }
+
+  if (CVImageR.channels() == 3) {
+    cv::cvtColor(CVImageR, frame->imageR, cv::COLOR_BGR2GRAY);
+  } else {
+    frame->imageR = CVImageR;
+  }
 
   // call frontend and viewer
   frontend->step(frame);

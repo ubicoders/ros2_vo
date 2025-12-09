@@ -70,6 +70,7 @@ void Frontend::init() {
 
   std::cout << "Frontend: Init" << std::endl;
   status_ = Status::TRACKING;
+  isFilterInitialized = false;
 }
 
 int16_t Frontend::createLeftFeature() {
@@ -84,6 +85,7 @@ int16_t Frontend::createLeftFeature() {
   std::vector<cv::KeyPoint> keypoints;
   // detect features using GFTT detector.
   gftt->detect(currentFrame->imageL, keypoints, mask);
+  // orb->detect(currentFrame->imageL, keypoints, mask);
 
   // adding the detected features to the current frame.
   for (auto &kp : keypoints) {
@@ -264,6 +266,13 @@ int16_t Frontend::estimatePose() {
   auto distCoeffs = cv::Mat::zeros(4, 1, CV_64F); // distortion coefficients
   // std::cout << "worldPoints size: " << worldPoints.size() << std::endl;
   // std::cout << "pixelPoints size: " << pixelPoints.size() << std::endl;
+
+  if (worldPoints.size() < 4) {
+    std::cout << "Not enough points for solvePnP: " << worldPoints.size()
+              << std::endl;
+    return 0;
+  }
+
   bool success = cv::solvePnPRansac(worldPoints, pixelPoints, K, distCoeffs,
                                     rVec, tVec, false, 100, 2.0, 0.99, inliers,
                                     cv::SOLVEPNP_ITERATIVE);
@@ -274,7 +283,32 @@ int16_t Frontend::estimatePose() {
     cv::Mat R;
     Eigen::Matrix3d eigenR;
     Eigen::Vector3d eigenT;
-    // create rotation matrix from rotation vector
+    // // Low-pass filter application with Outlier Rejection
+    // if (!isFilterInitialized) {
+    //   rVec.copyTo(rVecFiltered);
+    //   tVec.copyTo(tVecFiltered);
+    //   isFilterInitialized = true;
+    // } else {
+    //   double rNorm = cv::norm(rVec);
+    //   double tNorm = cv::norm(tVec);
+    //   double rFilteredNorm = cv::norm(rVecFiltered);
+    //   double tFilteredNorm = cv::norm(tVecFiltered);
+
+    //   // Check for outliers (1.5x magnitude jump)
+    //   if (rNorm > 0.1 * rFilteredNorm && tNorm > 1.5 * tFilteredNorm) {
+    //     std::cout << "Outlier detected! Ignoring jump. rNorm: " << rNorm
+    //               << " (ref: " << rFilteredNorm << "), tNorm: " << tNorm
+    //               << " (ref: " << tFilteredNorm << ")" << std::endl;
+    //     // Do NOT update the filter; keep using the old safe value.
+    //   } else {
+    //     // Safe to update
+    //     rVecFiltered = filterAlpha * rVec + (1.0 - filterAlpha) *
+    //     rVecFiltered; tVecFiltered = filterAlpha * tVec + (1.0 - filterAlpha)
+    //     * tVecFiltered;
+    //   }
+    // }
+
+    // // create rotation matrix from rotation vector using filtered values
     cv::Rodrigues(rVec, R);
 
     for (int i = 0; i < 3; ++i) {
