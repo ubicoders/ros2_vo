@@ -25,3 +25,4 @@ services:
       - "./robot_ws/:/home/ubuntu/robot_ws/" # Robot workspace
       - /mnt/01D66F5B1654EDA0/euroc:/home/ubuntu/euroc # EuroC dataset
       - /mnt/01D66F5B1654EDA0/KITTI:/home/ubuntu/KITTI # KITTI dataset
+      - /mnt/01D66F5B1654EDA0/custom_vo:/home/ubuntu/custom_vo # Custom VO dataset

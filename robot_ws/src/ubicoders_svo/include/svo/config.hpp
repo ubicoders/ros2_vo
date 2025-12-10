@@ -20,6 +20,13 @@ struct CameraConfig {
   // double cx = 364.44123;
   // double cy = 256.95168;
   // double baseline = 0.11008;
+
+  // Custom VO
+  // double fx = 1797.045;
+  // double fy = 1797.045;
+  // double cx = 720.013;
+  // double cy = 540.010;
+  // double baseline = 0.41332;
 };
 
 struct ROS2NodeConfig {
