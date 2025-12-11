@@ -48,6 +48,10 @@ private:
   cv::Mat tVecFiltered;
   bool isFilterInitialized = false;
   const double filterAlpha = 0.9;
+
+  // Relative motion for fallback
+  Sophus::SE3d relative_motion_;
+  bool use_relative_motion_ = true;
 };
 } // namespace UbiSVO
 

@@ -18,7 +18,7 @@ def generate_launch_description():
             arguments=[LaunchConfiguration('sequence')],
             parameters=[{
                 'publish_rate': 10.0,
-                'dataset_root': '/home/ubuntu/custom_vo/mckimway'
+                'dataset_root': '/mnt/f/custom_vo/mckimway'
             }]
         )
     ])

@@ -71,6 +71,7 @@ void Frontend::init() {
   std::cout << "Frontend: Init" << std::endl;
   status_ = Status::TRACKING;
   isFilterInitialized = false;
+  relative_motion_ = Sophus::SE3d();
 }
 
 int16_t Frontend::createLeftFeature() {
@@ -217,7 +218,8 @@ void Frontend::create3DMapPoint() {
     homogenousWorldPoint(2) = x.at<float>(2, 0);
     homogenousWorldPoint(3) = 1.0;
 
-    if (homogenousWorldPoint(2) > 0 && homogenousWorldPoint(2) <= 50) {
+    //    if (homogenousWorldPoint(2) > 0 && homogenousWorldPoint(2) <= 50) {
+    if (homogenousWorldPoint(2) > 0 && homogenousWorldPoint(2) <= 120) {
       homogenousWorldPoint = T_w2c * homogenousWorldPoint;
 
       worldPoint(0) = homogenousWorldPoint(0);
@@ -264,8 +266,23 @@ int16_t Frontend::estimatePose() {
 
   auto K = stereoCam->get_K();
   auto distCoeffs = cv::Mat::zeros(4, 1, CV_64F); // distortion coefficients
-  // std::cout << "worldPoints size: " << worldPoints.size() << std::endl;
-  // std::cout << "pixelPoints size: " << pixelPoints.size() << std::endl;
+
+  std::cout << "EstimatePose: worldPoints size: " << worldPoints.size()
+            << " / pixelPoints size: " << pixelPoints.size() << std::endl;
+
+  // Debug: Check for NaNs or crazy values
+  for (size_t i = 0; i < worldPoints.size(); ++i) {
+    auto &p = worldPoints[i];
+    if (std::isnan(p.x) || std::isnan(p.y) || std::isnan(p.z) ||
+        std::isinf(p.x) || std::isinf(p.y) || std::isinf(p.z)) {
+      std::cout << "Found BAD world point at index " << i << ": " << p
+                << std::endl;
+    }
+  }
+  if (!worldPoints.empty()) {
+    std::cout << "First world point: " << worldPoints[0] << std::endl;
+    std::cout << "Last world point: " << worldPoints.back() << std::endl;
+  }
 
   if (worldPoints.size() < 4) {
     std::cout << "Not enough points for solvePnP: " << worldPoints.size()
@@ -273,9 +290,10 @@ int16_t Frontend::estimatePose() {
     return 0;
   }
 
-  bool success = cv::solvePnPRansac(worldPoints, pixelPoints, K, distCoeffs,
-                                    rVec, tVec, false, 100, 2.0, 0.99, inliers,
-                                    cv::SOLVEPNP_ITERATIVE);
+  bool success = cv::solvePnPRansac(
+      worldPoints, pixelPoints, K, distCoeffs,
+      // rVec, tVec, false, 100, 2.0, 0.99, inliers,
+      rVec, tVec, false, 500, 2.0, 0.99, inliers, cv::SOLVEPNP_ITERATIVE);
 
   std::cout << "success: " << success << std::endl;
 
@@ -283,30 +301,6 @@ int16_t Frontend::estimatePose() {
     cv::Mat R;
     Eigen::Matrix3d eigenR;
     Eigen::Vector3d eigenT;
-    // // Low-pass filter application with Outlier Rejection
-    // if (!isFilterInitialized) {
-    //   rVec.copyTo(rVecFiltered);
-    //   tVec.copyTo(tVecFiltered);
-    //   isFilterInitialized = true;
-    // } else {
-    //   double rNorm = cv::norm(rVec);
-    //   double tNorm = cv::norm(tVec);
-    //   double rFilteredNorm = cv::norm(rVecFiltered);
-    //   double tFilteredNorm = cv::norm(tVecFiltered);
-
-    //   // Check for outliers (1.5x magnitude jump)
-    //   if (rNorm > 0.1 * rFilteredNorm && tNorm > 1.5 * tFilteredNorm) {
-    //     std::cout << "Outlier detected! Ignoring jump. rNorm: " << rNorm
-    //               << " (ref: " << rFilteredNorm << "), tNorm: " << tNorm
-    //               << " (ref: " << tFilteredNorm << ")" << std::endl;
-    //     // Do NOT update the filter; keep using the old safe value.
-    //   } else {
-    //     // Safe to update
-    //     rVecFiltered = filterAlpha * rVec + (1.0 - filterAlpha) *
-    //     rVecFiltered; tVecFiltered = filterAlpha * tVec + (1.0 - filterAlpha)
-    //     * tVecFiltered;
-    //   }
-    // }
 
     // // create rotation matrix from rotation vector using filtered values
     cv::Rodrigues(rVec, R);
@@ -321,6 +315,27 @@ int16_t Frontend::estimatePose() {
     eigenT(1) = tVec.at<double>(1, 0);
     eigenT(2) = tVec.at<double>(2, 0);
 
+    // Motion Fallback Implementation
+    Sophus::SE3d candidate_pose(eigenR, eigenT);
+    Sophus::SE3d candidate_relative;
+
+    if (prevFrame != nullptr) {
+      candidate_relative = candidate_pose * prevFrame->T_w2c.inverse();
+      double translation_norm = candidate_relative.translation().norm();
+
+      if (use_relative_motion_ && translation_norm > 1) {
+        std::cout << "Large jump detected (" << translation_norm
+                  << " m) ! Using constant velocity fallback." << std::endl;
+        currentFrame->T_w2c = relative_motion_ * prevFrame->T_w2c;
+      } else {
+        currentFrame->T_w2c = candidate_pose;
+        relative_motion_ = candidate_relative;
+      }
+    } else {
+      currentFrame->T_w2c = candidate_pose;
+      relative_motion_ = Sophus::SE3d(); // Identity
+    }
+
     // set the inliers
     for (auto &inlier : inliers) {
       features[inlier]->isInlier = true;
@@ -334,15 +349,20 @@ int16_t Frontend::estimatePose() {
       }
     }
 
-    currentFrame->T_w2c = Sophus::SE3d(eigenR, eigenT);
-
   } else {
     // Pose estimation failed - use previous frame's pose as fallback
     // to avoid setting position to (0,0,0) which corrupts the trajectory
     std::cout << "pose estimate failed!!" << std::endl;
     if (prevFrame != nullptr) {
-      currentFrame->T_w2c = prevFrame->T_w2c;
-      std::cout << "Using previous frame's pose as fallback" << std::endl;
+      if (use_relative_motion_) {
+        // Use constant velocity model instead of just static previous pose
+        currentFrame->T_w2c = relative_motion_ * prevFrame->T_w2c;
+        std::cout << "Using constant velocity fallback due to failure"
+                  << std::endl;
+      } else {
+        currentFrame->T_w2c = prevFrame->T_w2c;
+        std::cout << "Using previous frame's pose as fallback" << std::endl;
+      }
     } else {
       // No previous frame - set to identity (should only happen at startup)
       currentFrame->T_w2c = Sophus::SE3d();

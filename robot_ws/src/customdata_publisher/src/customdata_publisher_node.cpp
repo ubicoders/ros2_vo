@@ -1,3 +1,4 @@
+
 #include <algorithm>
 #include <chrono>
 #include <filesystem>
@@ -22,17 +23,19 @@ class CustomDataPublisher : public rclcpp::Node {
 public:
   CustomDataPublisher(const std::string &sequence_arg = "")
       : rclcpp::Node("customdata_publisher_node") {
-    
+
     // Default to /home/ubuntu/custom_vo/mckimway
+    // dataset_root_ = this->declare_parameter<std::string>("dataset_root",
+    // "/home/ubuntu/custom_vo/mckimway");
     dataset_root_ = this->declare_parameter<std::string>(
-        "dataset_root", "/home/ubuntu/custom_vo/mckimway");
+        "dataset_root", "/mnt/f/custom_vo/mckimway");
 
     // Handle sequence argument
     std::string default_sequence = sequence_arg;
     if (default_sequence.empty()) {
       default_sequence = "0";
     }
-    
+
     // Map command line arg "0"/"1" to directory name "seq0"/"seq1"
     std::string sequence_dir;
     if (default_sequence == "0") {
@@ -40,27 +43,27 @@ public:
     } else if (default_sequence == "1") {
       sequence_dir = "seq1";
     } else {
-      // If user provides something else, try to use it directly or fallback to seq0
-      // But strictly following requirement: "let user to choose 0 or 1"
-      // If they pass something else, we can assume they might mean a dir name or just default to seq0
-      // Let's assume validation isn't strict but mapping 0/1 is key.
+      // If user provides something else, try to use it directly or fallback to
+      // seq0 But strictly following requirement: "let user to choose 0 or 1" If
+      // they pass something else, we can assume they might mean a dir name or
+      // just default to seq0 Let's assume validation isn't strict but mapping
+      // 0/1 is key.
       if (default_sequence == "seq0" || default_sequence == "seq1") {
-          sequence_dir = default_sequence;
+        sequence_dir = default_sequence;
       } else {
-        RCLCPP_WARN(get_logger(), "Unknown sequence '%s', defaulting to seq0", default_sequence.c_str());
+        RCLCPP_WARN(get_logger(), "Unknown sequence '%s', defaulting to seq0",
+                    default_sequence.c_str());
         sequence_dir = "seq0";
       }
     }
 
-    sequence_ =
-        this->declare_parameter<std::string>("sequence", sequence_dir);
-        
+    sequence_ = this->declare_parameter<std::string>("sequence", sequence_dir);
+
     // Folder names are "left" and "right" in mckimway
-    left_folder_ =
-        this->declare_parameter<std::string>("left_folder", "left");
+    left_folder_ = this->declare_parameter<std::string>("left_folder", "left");
     right_folder_ =
         this->declare_parameter<std::string>("right_folder", "right");
-        
+
     frame_id_ =
         this->declare_parameter<std::string>("frame_id", "mckimway_camera");
     publish_rate_ = this->declare_parameter<double>("publish_rate", 10.0);
@@ -83,14 +86,13 @@ public:
         std::chrono::duration<double>(1.0 / std::max(publish_rate_, 0.1));
     timer_ = this->create_wall_timer(
         interval, std::bind(&CustomDataPublisher::publishNextPair, this));
-        
+
     // Construct full path for logging
     fs::path full_seq_path = fs::path(dataset_root_) / sequence_;
-    
-    RCLCPP_INFO(get_logger(),
-                "Streaming custom sequence %s (%zu frames) from %s",
-                sequence_.c_str(), left_image_paths_.size(),
-                full_seq_path.c_str());
+
+    RCLCPP_INFO(
+        get_logger(), "Streaming custom sequence %s (%zu frames) from %s",
+        sequence_.c_str(), left_image_paths_.size(), full_seq_path.c_str());
   }
 
 private:
